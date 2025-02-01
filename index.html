@@ -21,12 +21,21 @@
         .adlam-font {
             font-family: 'ADLaM Display', sans-serif;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        @keyframes moveText {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
         }
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
+
+        .moving-text {
+            display: inline-block;
+            animation: moveText 5s linear infinite;
         }
     </style>
 </head>
@@ -58,12 +67,12 @@
     <!-- Hero / Banner Section -->
     <section class="bg-[#FFFFFF]">
         <div class="container mx-auto flex flex-col md:gap-3 md:px-20 md:pt-8 md:pb-65 bg-cover md:bg-bottom bg-no-repeat hidden md:block" style="background-image: url('pictures/cat-big.png'); background-size: 90% 90%;">
-            <h1 class="adlam-font font-semibold md:text-[40px] fade-in">Pamper Your Pet,<br>Because They Deserve<br>the Bes</h1>
+            <h1 class="adlam-font font-semibold md:text-[40px] moving-text">Pamper Your Pet,<br>Because They Deserve<br>the Bes</h1>
             <p class="text-[#454545]">Discover a world of treats, toys, and <span class="block md:hidden"></span> essentials handpicked for<span class="hidden md:block"></span>your furry <span class="block md:hidden"></span> friends. Shop now and make tails wag with <span class="block md:hidden"></span> joy!</p>
             <button class="bg-[#FFDC26] rounded-lg px-4 py-2 w-40 mt-5">Find a pet</button>
         </div>
         <div class="container mx-auto flex flex-col gap-3 px-10 pt-5 pb-120  bg-cover bg-no-repeat block md:hidden" style="background-image: url('pictures/cat-big.png'); background-position: bottom; background-size: 90% 90%;">
-            <h1 class="adlam-font font-semibold text-[30px] fade-in">Pamper Your Pet,<br>Because They Deserve<br>the Best</h1>
+            <h1 class="adlam-font font-semibold text-[30px] moving-text"">Pamper Your Pet,<br>Because They Deserve<br>the Best</h1>
             <p class="text-[#454545] text-[15px]">Discover a world of treats, toys, and <span class="block md:hidden"></span> essentials handpicked for <span class="hidden md:block"></span> your furry <span class="block md:hidden"></span> friends. Shop now and make tails wag with <span class="block md:hidden"></span> joy!</p>
             <button class="bg-[#FFDC26] rounded-lg px-4 py-2 w-40 mt-5">Find a pet</button>
         </div>
